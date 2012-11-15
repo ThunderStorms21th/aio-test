@@ -81,6 +81,19 @@
 #define ARM_CPU_XSCALE_ARCH_V2		0x4000
 #define ARM_CPU_XSCALE_ARCH_V3		0x6000
 
+#define MPIDR_SMP_BITMASK (0x3 << 30)
+#define MPIDR_SMP_VALUE (0x2 << 30)
+
+#define MPIDR_MT_BITMASK (0x1 << 24)
+
+#define MPIDR_HWID_BITMASK 0xFFFFFF
+
+#define MPIDR_LEVEL_BITS 8
+#define MPIDR_LEVEL_MASK ((1 << MPIDR_LEVEL_BITS) - 1)
+
+#define MPIDR_AFFINITY_LEVEL(mpidr, level) \
+	((mpidr >> (MPIDR_LEVEL_BITS * level)) & MPIDR_LEVEL_MASK)
+
 extern unsigned int processor_id;
 
 #ifdef CONFIG_CPU_CP15

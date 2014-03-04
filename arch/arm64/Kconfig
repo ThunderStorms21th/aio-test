@@ -664,6 +664,22 @@ config SCHED_HMP_DOWN_MIGRATION_COMPENSATION
 	  guarantees proper performance to the down-migrated task by frequency
 	  qos lock.
 
+config SCHED_MC
+	bool "Multi-core scheduler support"
+	depends on SMP
+	help
+	  Multi-core scheduler support improves the CPU scheduler's decision
+	  making when dealing with multi-core CPU chips at a cost of slightly
+	  increased overhead in some places. If unsure say N here.
+
+config SCHED_SMT
+	bool "SMT scheduler support"
+	depends on SMP
+	help
+	  Improves the CPU scheduler's decision making when dealing with
+	  MultiThreading at a cost of slightly increased overhead in some
+	  places. If unsure say N here.
+
 config NR_CPUS
 	int "Maximum number of CPUs (2-64)"
 	# These have to remain sorted largest to smallest

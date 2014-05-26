@@ -6437,7 +6437,7 @@ int set_active_down_migration(int enable)
 	return hmp_active_dm_from_sysfs(enable);
 }
 
-int set_hmp_aggressive_up_migration(int enable)
+int set_hmp_aggressive_up_migration(int enable)\
 {
 	return hmp_aggressive_up_migration_from_sysfs(enable);
 }

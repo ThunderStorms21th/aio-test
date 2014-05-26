@@ -347,9 +347,7 @@ static inline void adjust_jiffies(unsigned long val, struct cpufreq_freqs *ci)
  *********************************************************************/
 
 static DEFINE_PER_CPU(unsigned long, freq_scale) = SCHED_CAPACITY_SCALE;
-static DEFINE_PER_CPU(unsigned long, max_freq_cpu);
 static DEFINE_PER_CPU(unsigned long, max_freq_scale) = SCHED_CAPACITY_SCALE;
-static DEFINE_PER_CPU(unsigned long, min_freq_scale);
 
 static void
 scale_freq_capacity(struct cpufreq_policy *policy, struct cpufreq_freqs *freqs)
@@ -1412,11 +1410,6 @@ static int __cpufreq_add_dev(struct device *dev, struct subsys_interface *sif)
 	for_each_cpu(j, policy->cpus)
 		per_cpu(cpufreq_cpu_data, j) = policy;
 	write_unlock_irqrestore(&cpufreq_driver_lock, flags);
-
-/* added restore min/max policy on CPU online */
-		policy->min = policy->user_policy.min;
-		policy->max = policy->user_policy.max;
- /* end of adds */
 
 	if (cpufreq_driver->get && !cpufreq_driver->setpolicy) {
 		policy->cur = cpufreq_driver->get(policy->cpu);

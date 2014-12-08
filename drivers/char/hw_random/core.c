@@ -475,6 +475,7 @@ int hwrng_register(struct hwrng *rng)
 	}
 
 	old_rng = current_rng;
+	err = 0;
 	if (!old_rng) {
 		set_current_rng(rng);
 		err = hwrng_init(rng);
@@ -482,9 +483,7 @@ int hwrng_register(struct hwrng *rng)
 			drop_current_rng();
 			goto out_unlock;
 		}
-	}
-	err = 0;
-	if (!old_rng) {
+
 		err = register_miscdev();
 		if (err) {
 			drop_current_rng();

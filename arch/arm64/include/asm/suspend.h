@@ -14,7 +14,7 @@
  */
 #define NR_CTX_REGS 13
 #else
-#define NR_CTX_REGS 11
+#define NR_CTX_REGS 13
 #endif
 
 /*

@@ -659,6 +659,10 @@ KBUILD_CFLAGS	+= -O2
 endif
 KBUILD_CFLAGS   += -mtune=cortex-a53 -mcpu=cortex-a53+crc+crypto
 
+ifdef CONFIG_CC_WERROR
+KBUILD_CFLAGS	+= -Werror
+endif
+
 # Tell gcc to never replace conditional load with a non-conditional one
 KBUILD_CFLAGS	+= $(call cc-option,--param=allow-store-data-races=0)
 ifdef CONFIG_READABLE_ASM

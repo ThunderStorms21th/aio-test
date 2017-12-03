@@ -675,6 +675,9 @@ KBUILD_AFLAGS	+= $(call cc-option,-fno-PIE)
 ifdef CONFIG_CC_OPTIMIZE_FOR_SIZE
 KBUILD_CFLAGS	+= $(call cc-option,-Oz,-Os)
 else
+ifeq ($(cc-name),clang)
+KBUILD_CFLAGS	+= -O3
+else
 KBUILD_CFLAGS	+= -O2
 endif
 KBUILD_CFLAGS   += -mtune=cortex-a53 -mcpu=cortex-a53+crc+crypto

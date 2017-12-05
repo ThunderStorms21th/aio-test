@@ -680,6 +680,7 @@ KBUILD_CFLAGS	+= -O3
 else
 KBUILD_CFLAGS	+= -O2
 endif
+endif
 KBUILD_CFLAGS   += -mtune=cortex-a53 -mcpu=cortex-a53+crc+crypto
 
 ifdef CONFIG_CC_WERROR

@@ -895,8 +895,12 @@ static int exynos_target(struct cpufreq_policy *policy,
 	ret = exynos_cpufreq_scale(target_freq, policy->cpu);
 	exynos_ss_freq(cur, freqs[cur]->old, target_freq, ESS_FLAG_OUT);
 
-	/* enable cluster power down  */
+	/* enable cluster power down for big cluster */
 	if (cur == CL_ONE)
+		exynos_enable_cpd(policy->cpu);
+
+	/* enable cluster power down for litle cluster */ // added
+	if (cur == CL_ZERO)
 		exynos_enable_cpd(policy->cpu);
 
 	if (ret < 0)

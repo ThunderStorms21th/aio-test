@@ -112,10 +112,10 @@ echo "0" > /proc/sys/kernel/panic
 
 # Setup swap here to avoid memory allocation errors
 # 256 MB
-echo $((512 * 1048576)) > /sys/devices/virtual/block/vnswap0/disksize >/dev/null 2>&1
+# echo $((512 * 1048576)) > /sys/devices/virtual/block/vnswap0/disksize >/dev/null 2>&1
 # echo 160 > /proc/sys/vm/swappiness
-mkswap /dev/block/vnswap0 >/dev/null 2>&1
-swapon /dev/block/vnswap0 >/dev/null 2>&1
+# mkswap /dev/block/vnswap0 >/dev/null 2>&1
+# swapon /dev/block/vnswap0 >/dev/null 2>&1
 
 # FINGERPRINT BOOST - OFF
 echo "0" > /sys/kernel/fp_boost/enabled

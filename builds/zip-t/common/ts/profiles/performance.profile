@@ -1,4 +1,4 @@
-# Performance
+# Performance v2
    
    # Little CPU
    chmod 0664 /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
@@ -20,7 +20,7 @@
    chmod 0664 /sys/devices/system/cpu/cpu0/cpufreq/interactive/target_loads
    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/target_loads "75"
    chmod 0664 /sys/devices/system/cpu/cpu0/cpufreq/interactive/min_sample_time
-   write /sys/devices/system/cpu/cpu0/cpufreq/interactive/min_sample_time 50000
+   write /sys/devices/system/cpu/cpu0/cpufreq/interactive/min_sample_time 60000
    chmod 0664 /sys/devices/system/cpu/cpu0/cpufreq/interactive/mode
    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/mode 0
    chmod 0664 /sys/devices/system/cpu/cpu0/cpufreq/interactive/boost
@@ -30,7 +30,7 @@
    chmod 0664 /sys/devices/system/cpu/cpu0/cpufreq/interactive/param_index
    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/param_index 0
    chmod 0664 /sys/devices/system/cpu/cpu0/cpufreq/interactive/boostpulse_duration
-   write /sys/devices/system/cpu/cpu0/cpufreq/interactive/boostpulse_duration 40000
+   write /sys/devices/system/cpu/cpu0/cpufreq/interactive/boostpulse_duration 20000
 
    # Big CPU
    chmod 0664 /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
@@ -62,7 +62,7 @@
    chmod 0664 /sys/devices/system/cpu/cpu4/cpufreq/interactive/param_index
    write /sys/devices/system/cpu/cpu4/cpufreq/interactive/param_index 0
    chmod 0664 /sys/devices/system/cpu/cpu4/cpufreq/interactive/boostpulse_duration
-   write /sys/devices/system/cpu/cpu4/cpufreq/interactive/boostpulse_duration 40000
+   write /sys/devices/system/cpu/cpu4/cpufreq/interactive/boostpulse_duration 20000
 
    # CPU HOTPLUG
    write /sys/power/cpuhotplug/enabled 1
@@ -84,9 +84,9 @@
 
    # HMP
    chmod 0664 /sys/kernel/hmp/up_threshold
-   write /sys/kernel/hmp/up_threshold 524
+   write /sys/kernel/hmp/up_threshold 450
    chmod 0664 /sys/kernel/hmp/down_threshold
-   write /sys/kernel/hmp/down_threshold 214
+   write /sys/kernel/hmp/down_threshold 200
    write /sys/kernel/hmp/down_compensation_high_freq 1170000
    chmod 0664 /sys/kernel/hmp/down_compensation_mid_freq
    write /sys/kernel/hmp/down_compensation_mid_freq 962000
@@ -109,14 +109,14 @@
    chmod 0664 /sys/devices/14ac0000.mali/highspeed_clock
    write /sys/devices/14ac0000.mali/highspeed_clock 419
    chmod 0664 /sys/devices/14ac0000.mali/highspeed_load
-   write /sys/devices/14ac0000.mali/highspeed_load 93
+   write /sys/devices/14ac0000.mali/highspeed_load 92
    chmod 0664 /sys/devices/14ac0000.mali/highspeed_delay
    write /sys/devices/14ac0000.mali/highspeed_delay 1
 
    # IO Scheduler
-   write /sys/block/sda/queue/scheduler zen
+   write /sys/block/sda/queue/scheduler dealine
    write /sys/block/sda/queue/read_ahead_kb 1024
-   write /sys/block/mmcblk0/queue/scheduler zen
+   write /sys/block/mmcblk0/queue/scheduler dealine
    write /sys/block/mmcblk0/queue/read_ahead_kb 2048
    write /sys/block/sda/queue/rq_affinity 1
    write /sys/block/mmcblk0/queue/rq_affinity 1
@@ -129,18 +129,16 @@
    write /sys/module/wakeup/parameters/enable_bcmdhd4359_wl 1
    write /sys/module/wakeup/parameters/enable_bluedroid_timer_wl 1
    write /sys/module/wakeup/parameters/enable_wlan_wake_wl 1
-   write /sys/module/sec_battery/parameters/wl_polling 10
+   write /sys/module/sec_battery/parameters/wl_polling 8
    write /sys/module/sec_nfc/parameters/wl_nfc 2
 
    # Misc
-   write /sys/module/sync/parameters/fsync_enabled 0
+   write /sys/module/sync/parameters/fsync_enabled 1
    write /sys/kernel/dyn_fsync/Dyn_fsync_active 0
    write /sys/kernel/sched/gentle_fair_sleepers 0
    write /sys/kernel/sched/arch_power 0
    write /sys/kernel/power_suspend/power_suspend_mode 3
-   write /proc/sys/net/ipv4/tcp_congestion_control westwood
-
-   # SWAP
+   write /proc/sys/net/ipv4/tcp_congestion_control westwooSWAPPING the  kernel  of # SWAP
    write /proc/sys/vm/swappiness 150
    write /proc/sys/vm/vfs_cache_pressure 100
 

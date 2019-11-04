@@ -1,4 +1,4 @@
-# Gaming
+# Gaming v2
    
    # Little CPU
    chmod 0664 /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
@@ -20,7 +20,7 @@
    chmod 0664 /sys/devices/system/cpu/cpu0/cpufreq/interactive/target_loads
    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/target_loads "75"
    chmod 0664 /sys/devices/system/cpu/cpu0/cpufreq/interactive/min_sample_time
-   write /sys/devices/system/cpu/cpu0/cpufreq/interactive/min_sample_time 40000
+   write /sys/devices/system/cpu/cpu0/cpufreq/interactive/min_sample_time 60000
    chmod 0664 /sys/devices/system/cpu/cpu0/cpufreq/interactive/mode
    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/mode 0
    chmod 0664 /sys/devices/system/cpu/cpu0/cpufreq/interactive/boost
@@ -52,7 +52,7 @@
    chmod 0664 /sys/devices/system/cpu/cpu4/cpufreq/interactive/target_loads
    write /sys/devices/system/cpu/cpu4/cpufreq/interactive/target_loads "75"
    chmod 0664 /sys/devices/system/cpu/cpu4/cpufreq/interactive/min_sample_time
-   write /sys/devices/system/cpu/cpu4/cpufreq/interactive/min_sample_time 40000
+   write /sys/devices/system/cpu/cpu4/cpufreq/interactive/min_sample_time 60000
    chmod 0664 /sys/devices/system/cpu/cpu4/cpufreq/interactive/mode
    write /sys/devices/system/cpu/cpu4/cpufreq/interactive/mode 0
    chmod 0664 /sys/devices/system/cpu/cpu4/cpufreq/interactive/boost
@@ -67,7 +67,7 @@
    # CPU HOTPLUG
    write /sys/power/cpuhotplug/enabled 1
    write /sys/module/autosmp/parameters/enabled N
-   write /sys/devices/system/cpu/cpufreq/mp-cpufreq/cluster1_all_cores_max_freq 0
+   write /sys/devices/system/cpu/cpufreq/mp-cpufreq/cluster1_all_cores_max_freq 1
    write /sys/module/workqueue/parameters/power_efficient N
 
    # Samsung Hotplug settings
@@ -94,7 +94,7 @@
    chmod 0664 /sys/kernel/hmp/down_compensation_low_freq
    write /sys/kernel/hmp/down_compensation_low_freq 858000
    write /proc/sys/kernel/random/write_wakeup_threshold 896
-   write /proc/sys/kernel/random/read_wakeup_threshold 64
+   write /proc/sys/kernel/random/read_wakeup_threshold 128
    write /proc/sys/vm/dirty_expire_centisecs 500
    write /proc/sys/vm/dirty_writeback_centisecs 1000
 
@@ -121,8 +121,8 @@
    write /sys/block/mmcblk0/queue/read_ahead_kb 2048
    write /sys/block/sda/queue/rq_affinity 1
    write /sys/block/mmcblk0/queue/rq_affinity 1
-   write /sys/block/sda/queue/nr_requests 256
-   write /sys/block/mmcblk0/queue/nr_requests 256
+   write /sys/block/sda/queue/nr_requests 512
+   write /sys/block/mmcblk0/queue/nr_requests 512
 
    # Wakelocks
    write /sys/module/wakeup/parameters/enable_sensorhub_wl 1
@@ -130,11 +130,11 @@
    write /sys/module/wakeup/parameters/enable_bcmdhd4359_wl 1
    write /sys/module/wakeup/parameters/enable_bluedroid_timer_wl 1
    write /sys/module/wakeup/parameters/enable_wlan_wake_wl 1
-   write /sys/module/sec_battery/parameters/wl_polling 5
+   write /sys/module/sec_battery/parameters/wl_polling 8
    write /sys/module/sec_nfc/parameters/wl_nfc 1
 
    # Misc
-   write /sys/module/sync/parameters/fsync_enabled 0
+   write /sys/module/sync/parameters/fsync_enabled 1
    write /sys/kernel/dyn_fsync/Dyn_fsync_active 0
    write /sys/kernel/sched/gentle_fair_sleepers 0
    write /sys/kernel/sched/arch_power 0
@@ -144,6 +144,7 @@
    # SWAP
    write /proc/sys/vm/swappiness 150
    write /proc/sys/vm/vfs_cache_pressure 100
+   # write /sys/module/zswap/parameters/max_pool_percent 500
 
    # LMK
    write /sys/module/lowmemorykiller/parameters/minfree "18432,23040,27648,32256,56064,81152"

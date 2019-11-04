@@ -2,9 +2,9 @@
 # ADDITIONAL_DEFAULT_PROPERTIES
 #
 
-# import original default.prop
+# Import original default.prop
 import /system/etc/prop.default
-import /system/etc/default.prop
+# import /system/etc/default.prop
 
 ro.secure=0
 security.perf_harden=1
@@ -15,6 +15,7 @@ ro.debuggable=1
 persist.sys.usb.config=mtp,adb
 persist.service.adb.enable=1
 persist.service.debuggable=1
+persist.sys.usb.config=none
 
 # MISC
 debug.enabler=false
@@ -55,5 +56,4 @@ debug.sf.early_gl_app_phase_offset_ns=15000000
 ro.bootimage.build.date=Wed Feb 13 17:57:51 UTC 2019
 ro.bootimage.build.date.utc=1550080671
 ro.bootimage.build.fingerprint=samsung/hero2ltexx/hero2lte:8.0.0/R16NW/G935FXXU2ERD5:user/release-keys
-persist.sys.usb.config=none
 

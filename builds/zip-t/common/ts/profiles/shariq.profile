@@ -1,11 +1,11 @@
-#  Thunderstorms - Shariq v4
+#  Thunderstorms - Shariq v5
 
    chmod 0664 /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor thunderstorm
    chmod 0664 /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 130000
    chmod 0664 /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
-   write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 1586000
+   write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 1690000
    chmod 0664 /sys/devices/system/cpu/cpu0/cpufreq/thunderstorm/go_hispeed_load
    write /sys/devices/system/cpu/cpu0/cpufreq/thunderstorm/go_hispeed_load 98
    chmod 0664 /sys/devices/system/cpu/cpu0/cpufreq/thunderstorm/above_hispeed_delay
@@ -67,7 +67,7 @@
    chmod 0664 /sys/devices/system/cpu/cpu4/cpufreq/thunderstorm/down_low_load_threshold
    write /sys/devices/system/cpu/cpu4/cpufreq/thunderstorm/down_low_load_threshold 25
 
-   # CPU HOTPLUG
+   # CPU HOTPLUG MAIN SETTINGS
    write /sys/power/cpuhotplug/enabled 1
    write /sys/module/autosmp/parameters/enabled N
    write /sys/devices/system/cpu/cpufreq/mp-cpufreq/cluster1_all_cores_max_freq 0
@@ -78,6 +78,16 @@
    write /sys/power/cpuhotplug/max_online_cpu 8
    chmod 0664 /sys/power/cpuhotplug/min_online_cpu
    write /sys/power/cpuhotplug/min_online_cpu 1
+   chmod 0664 /sys/power/cpuhotplug/governor/dual_change_ms
+   write /sys/power/cpuhotplug/governor/dual_change_ms 60
+   chmod 0644 /sys/power/cpuhotplug/governor/enabled
+   write /sys/power/cpuhotplug/governor/enabled 1
+   chmod 0644 /sys/power/cpuhotplug/governor/lit_multi_ratio
+   write /sys/power/cpuhotplug/governor/lit_multi_ratio 50
+   chmod 0644 /sys/power/cpuhotplug/governor/to_dual_ratio
+   write /sys/power/cpuhotplug/governor/to_dual_ratio 80
+   chmod 0644 /sys/power/cpuhotplug/governor/to_quad_ratio
+   write /sys/power/cpuhotplug/governor/to_quad_ratio 100
 
    # FINGERPRINT BOOST
    write /sys/kernel/fp_boost/enabled 0
@@ -89,24 +99,30 @@
    chmod 0664 /sys/kernel/hmp/up_threshold
    write /sys/kernel/hmp/up_threshold 825
    chmod 0664 /sys/kernel/hmp/down_threshold
-   write /sys/kernel/hmp/down_threshold 325
+   write /sys/kernel/hmp/down_threshold 380
+   chmod 0644 /sys/kernel/hmp/down_compensation_enabled 
+   write /sys/kernel/hmp/down_compensation_enabled 1
+   chmod 0644 /sys/kernel/hmp/down_compensation_threshold
+   write /sys/kernel/hmp/down_compensation_threshold 162
+   chmod 0644 /sys/kernel/hmp/down_compensation_timeout
+   write /sys/kernel/hmp/down_compensation_timeout 30
+   chmod 0644 /sys/kernel/hmp/sb_up_threshold
+   write /sys/kernel/hmp/sb_up_threshold 254
+   chmod 0644 /sys/kernel/hmp/sb_down_threshold
+   write /sys/kernel/hmp/sb_down_threshold 163
    chmod 0664 /sys/kernel/hmp/down_compensation_high_freq
    write /sys/kernel/hmp/down_compensation_high_freq 962000
    chmod 0664 /sys/kernel/hmp/down_compensation_mid_freq
    write /sys/kernel/hmp/down_compensation_mid_freq 858000
    chmod 0664 /sys/kernel/hmp/down_compensation_low_freq
    write /sys/kernel/hmp/down_compensation_low_freq 754000
+
+   # GPU
    write /sys/devices/14ac0000.mali/throttling1 546
    write /sys/devices/14ac0000.mali/throttling2 419
    write /sys/devices/14ac0000.mali/throttling3 338
    write /sys/devices/14ac0000.mali/throttling4 260
    write /sys/devices/14ac0000.mali/trippimg 112
-   write /proc/sys/kernel/random/write_wakeup_threshold 384
-   write /proc/sys/kernel/random/read_wakeup_threshold 64
-   write /proc/sys/vm/dirty_expire_centisecs 1500
-   write /proc/sys/vm/dirty_writeback_centisecs 3000
-
-   # GPU
    chmod 0664 /sys/devices/14ac0000.mali/max_clock
    write /sys/devices/14ac0000.mali/max_clock 650
    chmod 0664 /sys/devices/14ac0000.mali/min_clock
@@ -152,14 +168,36 @@
 
    write /proc/sys/net/ipv4/tcp_congestion_control bic
 
+## Virtual Memory Settings | Zram
+   #echo "N" > /sys/module/zswap/parameters/enabled;
+   # Y - enable, N - disable
+   
+   setprop persist.vnswap.enabled false
+   
+   chmod 0644 /sys/module/zswap/parameters/enable;
+   echo 0 > /sys/module/zswap/parameters/enable;
+   chmod 0444 /sys/module/zswap/parameters/enable;
+   swapoff /dev/block/zram0 > /dev/null 2>&1;
+   echo 1 >/sys/block/zram0/reset;
+   echo 2899312640 > /sys/block/zram0/disksize;
+   chmod 0644 /dev/block/zram0;
+   mkswap /dev/block/zram0 > /dev/null 2>&1;
+   swapon /dev/block/zram0 > /dev/null 2>&1;
+   
+   # ENTROPY
+   write /proc/sys/kernel/random/write_wakeup_threshold 384
+   write /proc/sys/kernel/random/read_wakeup_threshold 64
+
    # SWAP
-   write /proc/sys/vm/swappiness 100
+   write /proc/sys/vm/swappiness 60
    write /proc/sys/vm/vfs_cache_pressure 45
+   write /proc/sys/vm/dirty_expire_centisecs 1500
+   write /proc/sys/vm/dirty_writeback_centisecs 3000
 
    # WiFi
    setprop wifi.supplicant_scan_interval 550
 
    # Boeffla wakelocks
-   write /sys/devices/virtual/misc/boeffla_wakelock_blocker/wakelock_blocker 'wlan_rx_wake;wlan_wake;wlan_ctrl_wake;wlan_txfl_wake;BT_bt_wake;BT_host_wake;mmc0_detect;nfc_wake_lock;13960000.decon_f;rmnet0;GPSD;umts_ipc0;NETLINK'
+   write /sys/devices/virtual/misc/boeffla_wakelock_blocker/wakelock_blocker 'wlan_rx_wake;wlan_wake;wlan_ctrl_wake;wlan_txfl_wake;BT_bt_wake;BT_host_wake;mmc0_detect;nfc_wake_lock;grip_wake_lock;13960000.decon_f;rmnet0;GPSD;umts_ipc0;NETLINK'
 
    ## END

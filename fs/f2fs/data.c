@@ -659,7 +659,6 @@ static int f2fs_submit_page_read(struct inode *inode, struct page *page,
 	}
 	ClearPageError(page);
 	inc_page_count(sbi, F2FS_RD_DATA);
-	__f2fs_submit_read_bio(sbi, bio, DATA);
 	return 0;
 }
 

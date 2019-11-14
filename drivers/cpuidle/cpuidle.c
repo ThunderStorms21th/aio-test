@@ -89,17 +89,6 @@ int cpuidle_play_dead(void)
 	return -ENODEV;
 }
 
-/**
- * cpuidle_find_deepest_state - Find the deepest available idle state.
- * @drv: cpuidle driver for the given CPU.
- * @dev: cpuidle device for the given CPU.
- */
-int cpuidle_find_deepest_state(struct cpuidle_driver *drv,
-			       struct cpuidle_device *dev)
-{
-	return find_deepest_state(drv, dev, false);
-}
-
 static int find_deepest_state(struct cpuidle_driver *drv,
 			      struct cpuidle_device *dev, bool freeze)
 {
@@ -118,6 +107,17 @@ static int find_deepest_state(struct cpuidle_driver *drv,
 		ret = i;
 	}
 	return ret;
+}
+
+/**
+ * cpuidle_find_deepest_state - Find the deepest available idle state.
+ * @drv: cpuidle driver for the given CPU.
+ * @dev: cpuidle device for the given CPU.
+ */
+int cpuidle_find_deepest_state(struct cpuidle_driver *drv,
+			       struct cpuidle_device *dev)
+{
+	return find_deepest_state(drv, dev, false);
 }
 
 static void enter_freeze_proper(struct cpuidle_driver *drv,

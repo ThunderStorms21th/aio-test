@@ -115,23 +115,6 @@ EXPORT_SYMBOL(synchronize_irq);
 #ifdef CONFIG_SMP
 cpumask_var_t irq_default_affinity;
 
-static bool __irq_can_set_affinity(struct irq_desc *desc)
-{
-/**
- * irq_can_set_affinity_usr - Check if affinity of a irq can be set from user space
- * @irq:	Interrupt to check
- *
- * Like irq_can_set_affinity() above, but additionally checks for the
- * AFFINITY_MANAGED flag.
- */
-int irq_can_set_affinity_usr(unsigned int irq)
-{
-	struct irq_desc *desc = irq_to_desc(irq);
-
-	return __irq_can_set_affinity(desc) &&
-		!irqd_affinity_is_managed(&desc->irq_data);
-}
-
 /**
  *	irq_can_set_affinity - Check if the affinity of a given irq can be set
  *	@irq:		Interrupt to check

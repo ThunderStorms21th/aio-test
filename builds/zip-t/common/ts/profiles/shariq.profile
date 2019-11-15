@@ -11,13 +11,13 @@
    chmod 0664 /sys/devices/system/cpu/cpu0/cpufreq/thunderstorm/above_hispeed_delay
    write /sys/devices/system/cpu/cpu0/cpufreq/thunderstorm/above_hispeed_delay "40000 754000:30000 858000:27000 962000:25000"
    chmod 0664 /sys/devices/system/cpu/cpu0/cpufreq/thunderstorm/timer_rate
-   write /sys/devices/system/cpu/cpu0/cpufreq/thunderstorm/timer_rate 20000
+   write /sys/devices/system/cpu/cpu0/cpufreq/thunderstorm/timer_rate 24000
    chmod 0664 /sys/devices/system/cpu/cpu0/cpufreq/thunderstorm/hispeed_freq
    write /sys/devices/system/cpu/cpu0/cpufreq/thunderstorm/hispeed_freq 858000
    chmod 0664 /sys/devices/system/cpu/cpu0/cpufreq/thunderstorm/timer_slack
-   write /sys/devices/system/cpu/cpu0/cpufreq/thunderstorm/timer_slack 20000
+   write /sys/devices/system/cpu/cpu0/cpufreq/thunderstorm/timer_slack 24000
    chmod 0664 /sys/devices/system/cpu/cpu0/cpufreq/thunderstorm/target_loads
-   write /sys/devices/system/cpu/cpu0/cpufreq/thunderstorm/target_loads "75 1170000:85"
+   write /sys/devices/system/cpu/cpu0/cpufreq/thunderstorm/target_loads "75 1066000:85"
    chmod 0664 /sys/devices/system/cpu/cpu0/cpufreq/thunderstorm/min_sample_time
    write /sys/devices/system/cpu/cpu0/cpufreq/thunderstorm/min_sample_time 20000
    chmod 0664 /sys/devices/system/cpu/cpu0/cpufreq/thunderstorm/mode
@@ -43,15 +43,15 @@
    chmod 0664 /sys/devices/system/cpu/cpu4/cpufreq/thunderstorm/go_hispeed_load
    write /sys/devices/system/cpu/cpu4/cpufreq/thunderstorm/go_hispeed_load 98
    chmod 0664 /sys/devices/system/cpu/cpu4/cpufreq/thunderstorm/above_hispeed_delay
-   write /sys/devices/system/cpu/cpu4/cpufreq/thunderstorm/above_hispeed_delay "85000 728000:40000 1040000:30000 1248000:30000"
+   write /sys/devices/system/cpu/cpu4/cpufreq/thunderstorm/above_hispeed_delay "85000 728000:40000 1040000:30000 1144000:30000"
    chmod 0664 /sys/devices/system/cpu/cpu4/cpufreq/thunderstorm/timer_rate
-   write /sys/devices/system/cpu/cpu4/cpufreq/thunderstorm/timer_rate 20000
+   write /sys/devices/system/cpu/cpu4/cpufreq/thunderstorm/timer_rate 24000
    chmod 0664 /sys/devices/system/cpu/cpu4/cpufreq/thunderstorm/hispeed_freq
    write /sys/devices/system/cpu/cpu4/cpufreq/thunderstorm/hispeed_freq 1040000
    chmod 0664 /sys/devices/system/cpu/cpu4/cpufreq/thunderstorm/timer_slack
-   write /sys/devices/system/cpu/cpu4/cpufreq/thunderstorm/timer_slack 20000
+   write /sys/devices/system/cpu/cpu4/cpufreq/thunderstorm/timer_slack 24000
    chmod 0664 /sys/devices/system/cpu/cpu4/cpufreq/thunderstorm/target_loads
-   write /sys/devices/system/cpu/cpu4/cpufreq/thunderstorm/target_loads "80 1040000:81 1352000:87 1664000:90"
+   write /sys/devices/system/cpu/cpu4/cpufreq/thunderstorm/target_loads "80 1040000:81 1248000:87 1456000:90"
    chmod 0664 /sys/devices/system/cpu/cpu4/cpufreq/thunderstorm/min_sample_time
    write /sys/devices/system/cpu/cpu4/cpufreq/thunderstorm/min_sample_time 20000
    chmod 0664 /sys/devices/system/cpu/cpu4/cpufreq/thunderstorm/mode
@@ -63,7 +63,7 @@
    chmod 0664 /sys/devices/system/cpu/cpu4/cpufreq/thunderstorm/param_index
    write /sys/devices/system/cpu/cpu4/cpufreq/thunderstorm/param_index 0
    chmod 0664 /sys/devices/system/cpu/cpu4/cpufreq/thunderstorm/boostpulse_duration
-   write /sys/devices/system/cpu/cpu4/cpufreq/thunderstorm/boostpulse_duration 40000
+   write /sys/devices/system/cpu/cpu4/cpufreq/thunderstorm/boostpulse_duration 60000
    chmod 0664 /sys/devices/system/cpu/cpu4/cpufreq/thunderstorm/down_low_load_threshold
    write /sys/devices/system/cpu/cpu4/cpufreq/thunderstorm/down_low_load_threshold 25
 
@@ -83,9 +83,9 @@
    chmod 0644 /sys/power/cpuhotplug/governor/enabled
    write /sys/power/cpuhotplug/governor/enabled 1
    chmod 0644 /sys/power/cpuhotplug/governor/lit_multi_ratio
-   write /sys/power/cpuhotplug/governor/lit_multi_ratio 50
+   write /sys/power/cpuhotplug/governor/lit_multi_ratio 40
    chmod 0644 /sys/power/cpuhotplug/governor/to_dual_ratio
-   write /sys/power/cpuhotplug/governor/to_dual_ratio 80
+   write /sys/power/cpuhotplug/governor/to_dual_ratio 40
    chmod 0644 /sys/power/cpuhotplug/governor/to_quad_ratio
    write /sys/power/cpuhotplug/governor/to_quad_ratio 100
 
@@ -111,11 +111,11 @@
    chmod 0644 /sys/kernel/hmp/sb_down_threshold
    write /sys/kernel/hmp/sb_down_threshold 163
    chmod 0664 /sys/kernel/hmp/down_compensation_high_freq
-   write /sys/kernel/hmp/down_compensation_high_freq 962000
+   write /sys/kernel/hmp/down_compensation_high_freq 754000
    chmod 0664 /sys/kernel/hmp/down_compensation_mid_freq
-   write /sys/kernel/hmp/down_compensation_mid_freq 858000
+   write /sys/kernel/hmp/down_compensation_mid_freq 650000
    chmod 0664 /sys/kernel/hmp/down_compensation_low_freq
-   write /sys/kernel/hmp/down_compensation_low_freq 754000
+   write /sys/kernel/hmp/down_compensation_low_freq 546000
 
    # GPU
    write /sys/devices/14ac0000.mali/throttling1 546

@@ -12,7 +12,7 @@
    chmod 0644 /sys/devices/system/cpu/cpu0/cpufreq/interactive/above_hispeed_delay
    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/above_hispeed_delay "30000 1066000:30000"
    chmod 0644 /sys/devices/system/cpu/cpu0/cpufreq/interactive/timer_rate
-   write /sys/devices/system/cpu/cpu0/cpufreq/interactive/timer_rate 30000
+   write /sys/devices/system/cpu/cpu0/cpufreq/interactive/timer_rate 40000
    chmod 0644 /sys/devices/system/cpu/cpu0/cpufreq/interactive/hispeed_freq
    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/hispeed_freq 1066000
    chmod 0644 /sys/devices/system/cpu/cpu0/cpufreq/interactive/timer_slack
@@ -40,11 +40,11 @@
    chmod 0644 /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq
    write /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq 2288000
    chmod 0644 /sys/devices/system/cpu/cpu4/cpufreq/interactive/go_hispeed_load
-   write /sys/devices/system/cpu/cpu4/cpufreq/interactive/go_hispeed_load 90
+   write /sys/devices/system/cpu/cpu4/cpufreq/interactive/go_hispeed_load 94
    chmod 0644 /sys/devices/system/cpu/cpu4/cpufreq/interactive/above_hispeed_delay
    write /sys/devices/system/cpu/cpu4/cpufreq/interactive/above_hispeed_delay "60000 1248000:70000 1664000:20000"
    chmod 0644 /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_rate
-   write /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_rate 30000
+   write /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_rate 40000
    chmod 0644 /sys/devices/system/cpu/cpu4/cpufreq/interactive/hispeed_freq
    write /sys/devices/system/cpu/cpu4/cpufreq/interactive/hispeed_freq 1248000
    chmod 0644 /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_slack
@@ -62,7 +62,7 @@
    chmod 0644 /sys/devices/system/cpu/cpu4/cpufreq/interactive/param_index
    write /sys/devices/system/cpu/cpu4/cpufreq/interactive/param_index 0
    chmod 0644 /sys/devices/system/cpu/cpu4/cpufreq/interactive/boostpulse_duration
-   write /sys/devices/system/cpu/cpu4/cpufreq/interactive/boostpulse_duration 30000
+   write /sys/devices/system/cpu/cpu4/cpufreq/interactive/boostpulse_duration 40000
 
    # CPU HOTPLUG
    write /sys/power/cpuhotplug/enabled 1
@@ -82,7 +82,7 @@
    chmod 0644 /sys/power/cpuhotplug/governor/lit_multi_ratio
    write /sys/power/cpuhotplug/governor/lit_multi_ratio 80
    chmod 0644 /sys/power/cpuhotplug/governor/to_dual_ratio
-   write /sys/power/cpuhotplug/governor/to_dual_ratio 40
+   write /sys/power/cpuhotplug/governor/to_dual_ratio 60
    chmod 0644 /sys/power/cpuhotplug/governor/to_quad_ratio
    write /sys/power/cpuhotplug/governor/to_quad_ratio 100
 
@@ -148,7 +148,7 @@
    write /sys/kernel/sched/gentle_fair_sleepers 0
    write /sys/kernel/sched/arch_power 0
    write /sys/kernel/power_suspend/power_suspend_mode 3
-   write /proc/sys/net/ipv4/tcp_congestion_control westwood
+   write /proc/sys/net/ipv4/tcp_congestion_control cubic
 
    # LMK
    write /sys/module/lowmemorykiller/parameters/minfree "18432,23040,27648,32256,56064,76152"

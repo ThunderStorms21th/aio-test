@@ -56,6 +56,9 @@
 #include <linux/vmalloc.h>
 #include <linux/fs.h>
 #include <asm/uaccess.h>
+#include <linux/file.h>
+#include <linux/configfs.h>
+#include <linux/usb/composite.h>
 
 /* platform specific definitions */
 /* ex) #define __ANDROID__ */

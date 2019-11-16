@@ -1791,6 +1791,12 @@ static ssize_t store_cluster0_volt_table(struct kobject *kobj, struct attribute 
 }
 
 /*Toggle 4 cores max freq by Moro */
+static ssize_t show_cluster1_all_cores_max_freq(struct kobject *kobj,
+				struct attribute *attr, char *buf)
+{
+	return sprintf(buf, "%d\n", cluster1_all_cores);
+}
+
 static ssize_t store_cluster1_all_cores_max_freq(struct kobject *kobj, struct attribute *attr,
 					const char *buf, size_t count)
 {

@@ -31,7 +31,7 @@
    chmod 0664 /sys/devices/system/cpu/cpu0/cpufreq/thunderstorm/boostpulse_duration
    write /sys/devices/system/cpu/cpu0/cpufreq/thunderstorm/boostpulse_duration 20000
    chmod 0664 /sys/devices/system/cpu/cpu0/cpufreq/thunderstorm/down_low_load_threshold
-   write /sys/devices/system/cpu/cpu0/cpufreq/thunderstorm/down_low_load_threshold 10
+   write /sys/devices/system/cpu/cpu0/cpufreq/thunderstorm/down_low_load_threshold 15
 
    # Big CPU
    chmod 0664 /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
@@ -78,6 +78,16 @@
    write /sys/power/cpuhotplug/max_online_cpu 8
    chmod 0664 /sys/power/cpuhotplug/min_online_cpu
    write /sys/power/cpuhotplug/min_online_cpu 1
+   chmod 0644 /sys/power/cpuhotplug/governor/enabled
+   write /sys/power/cpuhotplug/governor/enabled 1
+   chmod 0664 /sys/power/cpuhotplug/governor/dual_change_ms
+   # write /sys/power/cpuhotplug/governor/dual_change_ms 60
+   chmod 0644 /sys/power/cpuhotplug/governor/lit_multi_ratio
+   write /sys/power/cpuhotplug/governor/lit_multi_ratio 80
+   chmod 0644 /sys/power/cpuhotplug/governor/to_dual_ratio
+   write /sys/power/cpuhotplug/governor/to_dual_ratio 70
+   chmod 0644 /sys/power/cpuhotplug/governor/to_quad_ratio
+   write /sys/power/cpuhotplug/governor/to_quad_ratio 98
 
    # FINGERPRINT BOOST
    write /sys/kernel/fp_boost/enabled 0
@@ -102,7 +112,7 @@
    write /sys/devices/14ac0000.mali/throttling4 260
    write /sys/devices/14ac0000.mali/trippimg 260
    write /proc/sys/kernel/random/write_wakeup_threshold 256
-   write /proc/sys/kernel/random/read_wakeup_threshold 64
+   write /proc/sys/kernel/random/read_wakeup_threshold 128
    write /proc/sys/vm/dirty_expire_centisecs 1500
    write /proc/sys/vm/dirty_writeback_centisecs 3000
 
@@ -118,7 +128,7 @@
    chmod 0664 /sys/devices/14ac0000.mali/highspeed_clock
    write /sys/devices/14ac0000.mali/highspeed_clock 419
    chmod 0664 /sys/devices/14ac0000.mali/highspeed_load
-   write /sys/devices/14ac0000.mali/highspeed_load 90
+   write /sys/devices/14ac0000.mali/highspeed_load 92
    chmod 0664 /sys/devices/14ac0000.mali/highspeed_delay
    write /sys/devices/14ac0000.mali/highspeed_delay 1
 
@@ -139,7 +149,7 @@
    write /sys/module/wakeup/parameters/enable_ssp_wl 0
    write /sys/module/wakeup/parameters/enable_bcmdhd4359_wl 0
    write /sys/module/wakeup/parameters/enable_bluedroid_timer_wl 1
-   write /sys/module/wakeup/parameters/enable_wlan_wake_wl 1
+   write /sys/module/wakeup/parameters/enable_wlan_wake_wl 0
    write /sys/module/sec_battery/parameters/wl_polling 3
    write /sys/module/sec_nfc/parameters/wl_nfc 1
 
@@ -147,7 +157,7 @@
    write /sys/module/sync/parameters/fsync_enabled 1
    write /sys/kernel/dyn_fsync/Dyn_fsync_active 0
    write /sys/kernel/sched/gentle_fair_sleepers 0
-   write /sys/kernel/sched/arch_power 1
+   write /sys/kernel/sched/arch_power 0
    write /sys/kernel/power_suspend/power_suspend_mode 3
    #write /sys/kernel/power_suspend/power_suspend_mode 1
    #write /sys/kernel/power_suspend/power_suspend_state 1

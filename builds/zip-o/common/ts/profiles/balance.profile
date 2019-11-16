@@ -84,7 +84,7 @@
    chmod 0644 /sys/power/cpuhotplug/governor/to_dual_ratio
    write /sys/power/cpuhotplug/governor/to_dual_ratio 70
    chmod 0644 /sys/power/cpuhotplug/governor/to_quad_ratio
-   write /sys/power/cpuhotplug/governor/to_quad_ratio 100
+   write /sys/power/cpuhotplug/governor/to_quad_ratio 95
 
    # FINGERPRINT BOOST
    write /sys/kernel/fp_boost/enabled 0
@@ -102,7 +102,7 @@
    chmod 0644 /sys/devices/14ac0000.mali/max_clock
    write /sys/devices/14ac0000.mali/max_clock 650
    chmod 0644 /sys/devices/14ac0000.mali/min_clock
-   write /sys/devices/14ac0000.mali/min_clock 260
+   write /sys/devices/14ac0000.mali/min_clock 112
    chmod 0644 /sys/devices/14ac0000.mali/power_policy
    write /sys/devices/14ac0000.mali/power_policy coarse_demand
    chmod 0644 /sys/devices/14ac0000.mali/dvfs_governor
@@ -110,7 +110,7 @@
    chmod 0644 /sys/devices/14ac0000.mali/highspeed_clock
    write /sys/devices/14ac0000.mali/highspeed_clock 419
    chmod 0644 /sys/devices/14ac0000.mali/highspeed_load
-   write /sys/devices/14ac0000.mali/highspeed_load 95
+   write /sys/devices/14ac0000.mali/highspeed_load 92
    chmod 0644 /sys/devices/14ac0000.mali/highspeed_delay
    write /sys/devices/14ac0000.mali/highspeed_delay 1
    write /sys/devices/14ac0000.mali/throttling1 600
@@ -124,7 +124,7 @@
    write /sys/kernel/hmp/down_compensation_mid_freq 962000
    chmod 0664 /sys/kernel/hmp/down_compensation_low_freq
    write /sys/kernel/hmp/down_compensation_low_freq 858000
-   write /proc/sys/kernel/random/write_wakeup_threshold 896
+   write /proc/sys/kernel/random/write_wakeup_threshold 512
    write /proc/sys/kernel/random/read_wakeup_threshold 64
 
    # IO Scheduler
@@ -139,7 +139,7 @@
    write /sys/module/wakeup/parameters/enable_bcmdhd4359_wl 1
    write /sys/module/wakeup/parameters/enable_bluedroid_timer_wl 1
    write /sys/module/wakeup/parameters/enable_wlan_wake_wl 1
-   write /sys/module/sec_battery/parameters/wl_polling 10
+   write /sys/module/sec_battery/parameters/wl_polling 5
    write /sys/module/sec_nfc/parameters/wl_nfc 2
 
    # Misc
@@ -153,5 +153,5 @@
    # LMK
    write /sys/module/lowmemorykiller/parameters/minfree "18432,23040,27648,32256,56064,76152"
    write /proc/sys/vm/vfs_cache_pressure 100
-   write /proc/sys/vm/swappiness 190
+   write /proc/sys/vm/swappiness 160
 

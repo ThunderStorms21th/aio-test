@@ -5,8 +5,6 @@
 # Licensed under GPLv2
 #
 
-ccflags-y += $(call cc-disable-warning, misleading-indentation)
-
 obj-$(CONFIG_EXYNOS_VPP) += vpp/
 obj-$(CONFIG_EXYNOS_MIPI_DSI) += dsim.o
 dsim-y += dsim_drv.o dsim_reg_8890.o

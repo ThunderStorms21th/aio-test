@@ -23,9 +23,6 @@
 # <<Broadcom-WL-IPTag/Open:>>
 #
 # bcmdhd
-
-ccflags-y += $(call cc-disable-warning, pointer-compare) $(call cc-disable-warning, switch-unreachable)
-
 #####################
 # Basic feature
 #####################

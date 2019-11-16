@@ -1,7 +1,5 @@
 # Makefile of modem_v1
 
-ccflags-y += $(call cc-disable-warning, duplicate-decl-specifier) $(call cc-disable-warning, logical-not-parentheses)
-
 EXTRA_CFLAGS += -Idrivers/misc/modem_v1 \
 		-DCONFIG_OPTION_REGION=\"$(PROJECT_REGION)\"
 

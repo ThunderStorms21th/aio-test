@@ -1,5 +1,3 @@
-ccflags-y += $(call cc-disable-warning, memset-elt-size)
-
 fimc-is-objs	:= fimc-is-core.o \
 		fimc-is-spi.o \
 		fimc-is-i2c.o \

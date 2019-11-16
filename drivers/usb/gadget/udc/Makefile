@@ -1,9 +1,6 @@
-##
+#
 # USB peripheral controller drivers
 #
-
-ccflags-y += $(call cc-disable-warning, misleading-indentation)
-
 obj-$(CONFIG_USB_GADGET)	+= udc-core.o
 obj-$(CONFIG_USB_DUMMY_HCD)	+= dummy_hcd.o
 obj-$(CONFIG_USB_NET2272)	+= net2272.o

@@ -1,5 +1,3 @@
-ccflags-y += $(call cc-disable-warning, misleading-indentation)
-
 obj-$(CONFIG_BCM_GPS_TTY_DRIVER) += bcm_gps_tty.o
 obj-$(CONFIG_BCM_GPS_I2C_DRIVER) += bcm_gps_i2c.o
 obj-$(CONFIG_BCM_GPS_SPI_DRIVER) += bcm_gps_spi.o

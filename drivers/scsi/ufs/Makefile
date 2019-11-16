@@ -1,5 +1,3 @@
-ccflags-y += $(call cc-disable-warning, switch-bool)
-
 # UFSHCD makefile
 obj-$(CONFIG_SCSI_UFSHCD) += ufshcd.o ufs_quirks.o
 obj-$(CONFIG_SCSI_UFSHCD_PCI) += ufshcd-pci.o

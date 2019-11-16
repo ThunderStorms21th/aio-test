@@ -2,9 +2,8 @@
 # USB peripheral controller drivers
 #
 
-ccflags-y			:= -I$(srctree)/drivers/usb/gadget/ $(call cc-disable-warning, misleading-indentation)
-ccflags-y			+= -I$(srctree)/drivers/usb/gadget/udc/ $(call cc-disable-warning, misleading-indentation)
-ccflags-y			+= $(call cc-disable-warning, misleading-indentation)
+ccflags-y			:= -I$(srctree)/drivers/usb/gadget/
+ccflags-y			+= -I$(srctree)/drivers/usb/gadget/udc/
 
 # USB Functions
 usb_f_acm-y			:= f_acm.o

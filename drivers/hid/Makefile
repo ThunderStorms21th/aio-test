@@ -1,9 +1,6 @@
 #
 # Makefile for the HID driver
 #
-
-ccflags-y += $(call cc-disable-warning, switch-unreachable)
-
 hid-y			:= hid-core.o hid-input.o
 
 ifdef CONFIG_DEBUG_FS

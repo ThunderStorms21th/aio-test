@@ -2,8 +2,8 @@
 <b>KERNEL INFORMATION:</b>
 
 	NAME	: <b><#selectbg_g>ThundeRStormS-Kernel-LOS17</#></b>	
-	VERSION	: <b><#selectbg_g>v1.1</#></b>
-	DATE	: <b><#selectbg_g>01/10/2019</#></b>
+	VERSION	: <b><#selectbg_g>v1.0</#></b>
+	DATE	: <b><#selectbg_g>20/11/2019</#></b>
 	AUTHOR	: <b><#selectbg_g>ThundeRStormS Team</#></b>
 
 <#53a6f4><b> Only For Galaxy S7/S7Edge | LOS17 Roms |</b></#>
@@ -11,33 +11,20 @@
 
 <b>CHANGELOG:</b>
 
--------------------------------------------------------------------------
-<u><b><#selectbg_g>FBT-Kernel-LOS17-v1.1 : 01.10.2019</#></b></u>
+--------------------------------------------------------------------------
+<u><b><#selectbg_g>ThunderStorms-Kernel-P-v1.0 : 20.11.2019</#></b></u>
 <*>Spectrum Profiles Updated </*>
-<*>Fixed load spectrum profile at boot - thx to Moro </*>
 <*>Improvements and updates in Linux source </*>
    -crypto, drivers, f2fs, arm64,lib and kernel,
    -block: cfq, deadline, bfq,
    -ramdisk: initial settings, abd, mtp,
-   -mm, fs, RCU, HZ, linux
-<*>ThunderTweaks v1.0.3.4 </*>
-<*>Magisk 19.5 </*>
-<*>Updated Ramdisk G930FXXS5CSF1 </*>
-<*>Updated Sources G930FXXS5CSF1 </*>
-<*>Linux updated to 3.18.140 </*>
-<*>Some Changes in Aroma by @MissACCA </*>
-<*>New Aroma theme by @Tagdu17 & @nalas </*>
-<*>Improvements for IRQ PM suspend mode </*>
-<*>Support LKM Deamon, LKM is disabled </*>
-<*> Eary SF Fixed </*>
-<*> F2FS, CIFS, NFS Support </*>
-<*>New splash screen by @nalas </*>
-<*>Added CPU Boost for each core </*>
-<*>Two New Cpu Gov has been added </*>
-   -MiniMax
-   -Userspace
-<*>Spectrum Profiles Updated </*>
+   -mm, fs, linux, i/o
+<*>Added EAS and new gov SCHED by @Tetsuo Osaka </*>
+<*>ThunderTweaks v1.0.4.0 </*>
+<*>Magisk 20.0 Offcial</*>
 <*>Better Stability and RAM Management </*>
 <*>Initial Release</*>
----------------------------------------------------------------------------
----------------------------------------------------------------------------
+<*>Rest like AiO v 1.1</*>
+--------------------------------------------------------------------------
+-------------------------------------------------------------------------
+

@@ -2,8 +2,8 @@
 <b>KERNEL INFORMATION:</b>
 
 	NAME	: <b><#selectbg_g>ThundeRStormS-Kernel-Oreo</#></b>	
-	VERSION	: <b><#selectbg_g>v2.5</#></b>
-	DATE	: <b><#selectbg_g>16/10/2019</#></b>
+	VERSION	: <b><#selectbg_g>v2.6</#></b>
+	DATE	: <b><#selectbg_g>20/11/2019</#></b>
 	AUTHOR	: <b><#selectbg_g>ThundeRStormS Team</#></b>
 
 <#53a6f4><b>Only For Galaxy S7/S7Edge|Stock Odex/Deodexed Roms|</b></#>
@@ -11,8 +11,21 @@
 
 <b>CHANGELOG:</b>
 
+--------------------------------------------------------------------------
+<u><b><#selectbg_g>ThundeRStormS-Kernel-O-v2.6 : 20.11.2019</#></b></u>
+<*>Spectrum Profiles Updated </*>
+<*>Improvements and updates in Linux source </*>
+   -crypto, drivers, f2fs, arm64,lib and kernel,
+   -block: cfq, deadline, bfq,
+   -ramdisk: initial settings, abd, mtp,
+   -mm, fs, linux, i/o
+<*>Added EAS and new gov SCHED by @Tetsuo Osaka </*>
+<*>ThunderTweaks v1.0.4.0 </*>
+<*>Magisk 20.0 Offcial</*>
+<*>Better Stability and RAM Management </*>
+--------------------------------------------------------------------------
 -------------------------------------------------------------------------
-<u><b><#selectbg_g>FBT-Kernel-O-v2.5 : 01.10.2019</#></b></u>
+<u><b><#selectbg_g>ThundeRStormS-Kernel-O-v2.5 : 01.10.2019</#></b></u>
 <*>Spectrum Profiles Updated </*>
 <*>Fixed load spectrum profile at boot - thx to Moro </*>
 <*>Improvements and updates in Linux source </*>
@@ -25,7 +38,7 @@
 <*>Better Stability and RAM Management </*>
 -------------------------------------------------------------------------
 -------------------------------------------------------------------------
-<u><b><#selectbg_g>FBT-Kernel-O-v2.4 : 06.09.2019</#></b></u>
+<u><b><#selectbg_g>ThundeRStormS-Kernel-O-v2.4 : 06.09.2019</#></b></u>
 <*>Updated Ramdisk G930FXXS5CSF1 </*>
 <*>Updated Sources G930FXXS5CSF1 </*>
 <*>Linux updated to 3.18.140 </*>
@@ -45,7 +58,7 @@
 <*>Rest like in TS-OREO v2.3</*>
 ---------------------------------------------------------------------------
 ---------------------------------------------------------------------------
-<u><b><#selectbg_g>FBT-Kernel-O-v2.3 : 14.07.2019</#></b></u>
+<u><b><#selectbg_g>ThundeRStormS-Kernel-O-v2.3 : 14.07.2019</#></b></u>
 <*>Samsung sources G930FXXU3ERL3</*>
 <*>Samsung ramdisk G930FXXU5ESD2</*>
 <*>Support odexed / deodexed roms</*>
@@ -98,7 +111,7 @@
 <*>Rest like in TS-OREO v2.2</*>
 ----------------------------------------------------------------------------
 ----------------------------------------------------------------------------
-<u><b><#selectbg_g>FBT-Kernel-O v2.2 : 1.05.2019</#></b></u>
+<u><b><#selectbg_g>ThundeRStormS-Kernel-O v2.2 : 1.05.2019</#></b></u>
 <*>Samsung sources G930FXXU3ERL3</*>
 <*>Samsung ramdisk G930FXXS4ESC7</*>
 <*>Support odexed, deodexed and ported roms</*>
@@ -137,7 +150,7 @@
 <*>The rest like in previous version v2.1</*>
 ----------------------------------------------------------------------------
 ----------------------------------------------------------------------------
-<u><b><#selectbg_g>FBT-Kernel-O v2.1 : 26.04.2019</#></b></u>
+<u><b><#selectbg_g>ThundeRStormS-Kernel-O v2.1 : 26.04.2019</#></b></u>
 <*>Samsung sources G930FXXU3ERL3</*>
 <*>Samsung ramdisk G930FXXS4ESC7</*>
 <*>Support odexed, deodexed and ported roms</*>
@@ -164,7 +177,7 @@
 <*>The rest like in previous version v2.0</*>
 ----------------------------------------------------------------------------
 ----------------------------------------------------------------------------
-<u><b><#selectbg_g>FBT-Kernel-O v2.0 : 16.04.2019</#></b></u>
+<u><b><#selectbg_g>ThundeRStormS-Kernel-O v2.0 : 16.04.2019</#></b></u>
 <*>Samsung sources G930FXXU3ERL3</*>
 <*>Samsung ramdisk G930FXXS4ESC7</*>
 <*>Support odexed, deodexed and ported roms</*>
@@ -191,7 +204,7 @@
 <*>The rest like in previous version v1.9</*>
 ----------------------------------------------------------------------------
 ----------------------------------------------------------------------------
-<u><b><#selectbg_g>FBT-Kernel-O v1.9 : 12.04.2019</#></b></u>
+<u><b><#selectbg_g>ThundeRStormS-Kernel-O v1.9 : 12.04.2019</#></b></u>
 <*>Samsung sources G930FXXU3ERL3</*>
 <*>Samsung ramdisk G930FXXS4ESC7</*>
 <*>Support odexed, deodexed and ported roms</*>
@@ -212,7 +225,7 @@
 <*>The rest like in previous version v1.8</*>
 ----------------------------------------------------------------------------
 ----------------------------------------------------------------------------
-<u><b><#selectbg_g>FBT-Kernel-O v1.8 : 23.03.2019</#></b></u>
+<u><b><#selectbg_g>ThundeRStormS-Kernel-O v1.8 : 23.03.2019</#></b></u>
 <*>Samsung sources G930FXXU3ERL3</*>
 <*>Samsung ramdisk G930FXXS4ESC1</*>
 <*>Support odexed, deodexed and ported roms</*>
@@ -239,7 +252,7 @@
 <*>The rest like in previous version v1.7</*>
 ----------------------------------------------------------------------------
 ----------------------------------------------------------------------------
-<u><b><#selectbg_g>FBT-Kernel-O v1.7 : 13.03.2019</#></b></u>
+<u><b><#selectbg_g>ThundeRStormS-Kernel-O v1.7 : 13.03.2019</#></b></u>
 <*>Samsung sources G930FXXU3ERL3</*>
 <*>Samsung ramdisk G930FXXS4ESBB</*>
 <*>Support deodexed and ported roms | not sure 100% works</*>
@@ -260,7 +273,7 @@
 <*>The rest like in previous version v1.6</*>
 ----------------------------------------------------------------------------
 ----------------------------------------------------------------------------
-<u><b><#selectbg_g>FBT-Kernel-O v1.6 : 6.03.2019</#></b></u>
+<u><b><#selectbg_g>ThundeRStormS-Kernel-O v1.6 : 6.03.2019</#></b></u>
 <*>Samsung sources G930FXXU3ERL3</*>
 <*>Samsung ramdisk G930FXXS4ESBB</*>
 <*>Support deodexed and ported roms | not sure 100% works</*>
@@ -280,7 +293,7 @@
 <*>The rest like in previous version v1.5</*>
 ----------------------------------------------------------------------------
 ----------------------------------------------------------------------------
-<u><b><#selectbg_g>FBT-Kernel-O v1.5 : 1.03.2019</#></b></u>
+<u><b><#selectbg_g>ThundeRStormS-Kernel-O v1.5 : 1.03.2019</#></b></u>
 <*>Samsung sources G930FXXU3ERL3</*>
 <*>Samsung ramdisk G930FXXU3ESA2</*>
 <*>Support deodexed and ported roms | not sure 100% works</*>
@@ -310,7 +323,7 @@
 <*>The rest like in previous version v1.4.2</*>
 ----------------------------------------------------------------------------
 ----------------------------------------------------------------------------
-<u><b><#selectbg_g>FBT-Kernel-O v1.4.2 : 23.02.2019</#></b></u>
+<u><b><#selectbg_g>ThundeRStormS-Kernel-O v1.4.2 : 23.02.2019</#></b></u>
 <*>Samsung sources G930FXXU3ERL3</*>
 <*>Samsung ramdisk G930FXXU3ESA2</*>
 <*>Flat and Edge versions</*>
@@ -319,7 +332,7 @@
 <*>The rest like in previous version v1.4.1</*>
 ----------------------------------------------------------------------------
 ----------------------------------------------------------------------------
-<u><b><#selectbg_g>FBT-Kernel-O v1.4.1 : 22.02.2019</#></b></u>
+<u><b><#selectbg_g>ThundeRStormS-Kernel-O v1.4.1 : 22.02.2019</#></b></u>
 <*>Samsung sources G930FXXU3ERL3</*>
 <*>Samsung ramdisk G930FXXU3ESA2</*>
 <*>Flat and Edge versions</*>
@@ -327,7 +340,7 @@
 <*>The rest like in previous version v1.4</*>
 ----------------------------------------------------------------------------
 ----------------------------------------------------------------------------
-<u><b><#selectbg_g>FBT-Kernel-O v1.4 : 20.02.2019</#></b></u>
+<u><b><#selectbg_g>ThundeRStormS-Kernel-O v1.4 : 20.02.2019</#></b></u>
 <*>Samsung sources G930FXXU3ERL3</*>
 <*>Samsung ramdisk G930FXXU3ESA2</*>
 <*>Flat and Edge versions</*>
@@ -354,7 +367,7 @@
 <*>The rest like in previous version v1.3</*>
 ----------------------------------------------------------------------------
 ----------------------------------------------------------------------------
-<u><b><#selectbg_g>FBT-Kernel-O v1.3 : 10.02.2019</#></b></u>
+<u><b><#selectbg_g>ThundeRStormS-Kernel-O v1.3 : 10.02.2019</#></b></u>
 <*>Samsung sources G930FXXU3ERL3</*>
 <*>Samsung ramdisk G930FXXU3ERL3</*>
 <*>Flat and Edge versions</*>
@@ -372,7 +385,7 @@
 <*>The rest like in previous version v1.2</*>
 ----------------------------------------------------------------------------
 ----------------------------------------------------------------------------
-<u><b><#selectbg_g>FBT-Kernel-O v1.2 : 7.02.2019</#></b></u>
+<u><b><#selectbg_g>ThundeRStormS-Kernel-O v1.2 : 7.02.2019</#></b></u>
 <*>Samsung sources G930FXXU3ERL3</*>
 <*>Samsung ramdisk G930FXXU3ERL3</*>
 <*>Flat and Edge versions</*>
@@ -389,7 +402,7 @@
 <*>The rest like in previous version v1.1</*>
 ----------------------------------------------------------------------------
 ----------------------------------------------------------------------------
-<u><b><#selectbg_g>FBT-Kernel-O v1.1 : 6.02.2019</#></b></u>
+<u><b><#selectbg_g>ThundeRStormS-Kernel-O v1.1 : 6.02.2019</#></b></u>
 <*>Samsung sources G930FXXU3ERL3</*>
 <*>Samsung ramdisk G930FXXU3ERL3</*>
 <*>Flat and Edge versions</*>
@@ -409,7 +422,7 @@
 <*>The rest like in previous version</*>
 ----------------------------------------------------------------------------
 ----------------------------------------------------------------------------
-<u><b><#selectbg_g>FBT-Kernel-O v1.0 : 30.01.2019</#></b></u>
+<u><b><#selectbg_g>ThundeRStormS-Kernel-O v1.0 : 30.01.2019</#></b></u>
 <*>Samsung sources G930FXXU3ERL3</*>
 <*>Samsung ramdisk G930FXXU3ERL3</*>
 <*>Almost stock kernel features</*>

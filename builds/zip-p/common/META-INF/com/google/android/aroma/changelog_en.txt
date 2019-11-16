@@ -2,8 +2,8 @@
 <b>KERNEL INFORMATION:</b>
 
 	NAME	: <b><#selectbg_g>ThundeRStormS-Kernel-Pie</#></b>	
-	VERSION	: <b><#selectbg_g>v2.2</#></b>
-	DATE	: <b><#selectbg_g>01/10/2019</#></b>
+	VERSION	: <b><#selectbg_g>v2.3</#></b>
+	DATE	: <b><#selectbg_g>20/11/2019</#></b>
 	AUTHOR	: <b><#selectbg_g>ThundeRStormS Team</#></b>
 
 <#53a6f4><b> Only For Galaxy S7/S7Edge | Stock Odex/Deodex Roms |</b></#>
@@ -12,7 +12,20 @@
 <b>CHANGELOG:</b>
 
 --------------------------------------------------------------------------
-<u><b><#selectbg_g>FBT-Kernel-P-v2.2 : 01.10.2019</#></b></u>
+<u><b><#selectbg_g>ThunderStorms-Kernel-P-v2.3 : 20.11.2019</#></b></u>
+<*>Spectrum Profiles Updated </*>
+<*>Improvements and updates in Linux source </*>
+   -crypto, drivers, f2fs, arm64,lib and kernel,
+   -block: cfq, deadline, bfq,
+   -ramdisk: initial settings, abd, mtp,
+   -mm, fs, linux, i/o
+<*>Added EAS and new gov SCHED by @Tetsuo Osaka </*>
+<*>ThunderTweaks v1.0.4.0 </*>
+<*>Magisk 20.0 Offcial</*>
+<*>Better Stability and RAM Management </*>
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+<u><b><#selectbg_g>ThunderStorms-Kernel-P-v2.2 : 01.10.2019</#></b></u>
 <*>Spectrum Profiles Updated </*>
 <*>Fixed load spectrum profile at boot - thx to Moro </*>
 <*>Improvements and updates in Linux source </*>
@@ -25,7 +38,7 @@
 <*>Better Stability and RAM Management </*>
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-<u><b><#selectbg_g>FBT-Kernel-P-v2.1 : 06.09.2019</#></b></u>
+<u><b><#selectbg_g>ThunderStorms-Kernel-P-v2.1 : 06.09.2019</#></b></u>
 <*>Updated Ramdisk G930FXXS5CSF1 </*>
 <*>Updated Sources G930FXXS5CSF1 </*>
 <*>Linux updated to 3.18.140 </*>
@@ -41,7 +54,7 @@
 <*>Better Stability and RAM Management </*>
 ---------------------------------------------------------------------------
 ---------------------------------------------------------------------------
-<u><b><#selectbg_g>FBT-Kernel-P-v2.0 : 25.08.2019</#></b></u>
+<u><b><#selectbg_g>ThunderStorms-Kernel-P-v2.0 : 25.08.2019</#></b></u>
 <*>Updated Ramdisk G930FXXS5CSF1 </*>
 <*>Updated Sources G930FXXS5CSF1 </*>
 <*>Linux updated to 3.18.140 </*>
@@ -60,7 +73,7 @@
 <*>Rest like in TS-PIE v1.9</*>
 ---------------------------------------------------------------------------
 ---------------------------------------------------------------------------
-<u><b><#selectbg_g>FBT-Kernel-P-v1.9 : 27.07.2019</#></b></u>
+<u><b><#selectbg_g>ThunderStorms-Kernel-P-v1.9 : 27.07.2019</#></b></u>
 <*>Samsung sources G930FXXU4CSC4</*>
 <*>Samsung ramdisk G930FXXS4CSC4</*>
 <*>Support odexed / deodexed roms NFE/N8</*>
@@ -101,7 +114,7 @@
 <*>Rest like in TS-PIE v1.8</*>
 ---------------------------------------------------------------------------
 ---------------------------------------------------------------------------
-<u><b><#selectbg_g>FBT-Kernel-P-v1.8 : 2.07.2019</#></b></u>
+<u><b><#selectbg_g>ThunderStorms-Kernel-P-v1.8 : 2.07.2019</#></b></u>
 <*>Samsung sources G930FXXU4CSC4</*>
 <*>Samsung ramdisk G930FXXS4CSC4</*>
 <*>Support odexed / deodexed roms NFE/N8</*>
@@ -133,7 +146,7 @@
 <*>Rest like in TS-PIE v1.7</*>
 ---------------------------------------------------------------------------
 ---------------------------------------------------------------------------
-<u><b><#selectbg_g>FBT-Kernel-P-v1.7 : 18.06.2019</#></b></u>
+<u><b><#selectbg_g>ThunderStorms-Kernel-P-v1.7 : 18.06.2019</#></b></u>
 <*>Samsung sources G930FXXU4CSC4</*>
 <*>Samsung ramdisk G930FXXS4CSC4</*>
 <*>Support odexed / deodexed roms NFE/N8</*>

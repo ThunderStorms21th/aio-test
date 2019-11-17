@@ -12,7 +12,7 @@
    chmod 0644 /sys/devices/system/cpu/cpu0/cpufreq/interactive/above_hispeed_delay
    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/above_hispeed_delay "19000 1248000:30000"
    chmod 0644 /sys/devices/system/cpu/cpu0/cpufreq/interactive/timer_rate
-   write /sys/devices/system/cpu/cpu0/cpufreq/interactive/timer_rate 20000
+   write /sys/devices/system/cpu/cpu0/cpufreq/interactive/timer_rate 30000
    chmod 0644 /sys/devices/system/cpu/cpu0/cpufreq/interactive/hispeed_freq
    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/hispeed_freq 1248000
    chmod 0644 /sys/devices/system/cpu/cpu0/cpufreq/interactive/timer_slack
@@ -44,7 +44,7 @@
    chmod 0644 /sys/devices/system/cpu/cpu4/cpufreq/interactive/above_hispeed_delay
    write /sys/devices/system/cpu/cpu4/cpufreq/interactive/above_hispeed_delay "59000 1248000:79000 1664000:19000"
    chmod 0644 /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_rate
-   write /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_rate 20000
+   write /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_rate 30000
    chmod 0644 /sys/devices/system/cpu/cpu4/cpufreq/interactive/hispeed_freq
    write /sys/devices/system/cpu/cpu4/cpufreq/interactive/hispeed_freq 1248000
    chmod 0644 /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_slack
@@ -129,9 +129,9 @@
 
    # IO Scheduler
    write /sys/block/sda/queue/scheduler cfq
-   write /sys/block/sda/queue/read_ahead_kb 256
+   write /sys/block/sda/queue/read_ahead_kb 512
    write /sys/block/mmcblk0/queue/scheduler cfq
-   write /sys/block/mmcblk0/queue/read_ahead_kb 256
+   write /sys/block/mmcblk0/queue/read_ahead_kb 512
 
    # Wakelocks
    write /sys/module/wakeup/parameters/enable_sensorhub_wl 1

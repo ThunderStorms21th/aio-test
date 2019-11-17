@@ -146,7 +146,7 @@ static void exynos_hpgov_big_mode_update(int big_mode)
 	else
 	/* @nalas - added min 6 cores on (2 cores of BIG_CLUSTER) if DUAL MODE is ON */
 	if (big_mode == BIG_DUAL_MODE)
-		exynos_hpgov.data.req_cpu_min = 7; 	/* end */
+		exynos_hpgov.data.req_cpu_min = 6; 	/* end */
 	else
 		exynos_hpgov.data.req_cpu_min = 5;	// 6
 	spin_unlock_irqrestore(&hpgov_lock, flags);

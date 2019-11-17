@@ -82,7 +82,7 @@ struct cpufreq_thunderstorm_tunables {
 	/* Hi speed to bump to from lo speed when load burst (default max) */
 	unsigned int hispeed_freq;
 	/* Go to hi speed when CPU load at or above this value. */
-#define DEFAULT_GO_HISPEED_LOAD 99
+#define DEFAULT_GO_HISPEED_LOAD 90
 	unsigned long go_hispeed_load;
 	/* Target load. Lower values result in higher CPU speeds. */
 	spinlock_t target_loads_lock;
@@ -92,7 +92,7 @@ struct cpufreq_thunderstorm_tunables {
 	 * The minimum amount of time to spend at a frequency before we can ramp
 	 * down.
 	 */
-#define DEFAULT_MIN_SAMPLE_TIME (80 * USEC_PER_MSEC)
+#define DEFAULT_MIN_SAMPLE_TIME (40 * USEC_PER_MSEC)
 	unsigned long min_sample_time;
 	/*
 	 * The sample rate of the timer used to increase frequency
@@ -116,7 +116,7 @@ struct cpufreq_thunderstorm_tunables {
 	 * Max additional time to wait in idle, beyond timer_rate, at speeds
 	 * above minimum before wakeup to reduce speed, or -1 if unnecessary.
 	 */
-#define DEFAULT_TIMER_SLACK (4 * DEFAULT_TIMER_RATE)
+#define DEFAULT_TIMER_SLACK (2 * DEFAULT_TIMER_RATE)
 	int timer_slack_val;
 	bool io_is_busy;
 
@@ -893,13 +893,6 @@ static ssize_t store_down_low_load_threshold(struct cpufreq_thunderstorm_tunable
 	if (ret < 0 || ret > 50)
 		return ret;
 
-//	val_round = jiffies_to_usecs(usecs_to_jiffies(val));
-//	val_round = ret + val; // was val
-//	if (val != val_round)
-//		pr_warn("down_low_load_threshold not aligned to jiffy. Rounded up to %lu\n",
-//			val_round);
-
-//	tunables->down_low_load_threshold = val_round;
 	tunables->down_low_load_threshold = val;
 	return count;
 }

@@ -14,67 +14,69 @@ on boot
    # CPU set at max/min freq
    # Little CPU
    chmod 0644 /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
-   write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor interactive
+   write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor thunderstorm
    chmod 0644 /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
-   write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 442000
+   write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 338000
    chmod 0644 /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 1586000
-   chmod 0644 /sys/devices/system/cpu/cpu0/cpufreq/interactive/go_hispeed_load
-   write /sys/devices/system/cpu/cpu0/cpufreq/interactive/go_hispeed_load 85
-   chmod 0644 /sys/devices/system/cpu/cpu0/cpufreq/interactive/above_hispeed_delay
-   write /sys/devices/system/cpu/cpu0/cpufreq/interactive/above_hispeed_delay "19000 1274000:30000"
-   chmod 0644 /sys/devices/system/cpu/cpu0/cpufreq/interactive/timer_rate
-   write /sys/devices/system/cpu/cpu0/cpufreq/interactive/timer_rate 30000
-   chmod 0644 /sys/devices/system/cpu/cpu0/cpufreq/interactive/hispeed_freq
-   write /sys/devices/system/cpu/cpu0/cpufreq/interactive/hispeed_freq 1066000
-   chmod 0644 /sys/devices/system/cpu/cpu0/cpufreq/interactive/timer_slack
-   write /sys/devices/system/cpu/cpu0/cpufreq/interactive/timer_slack 20000
-   chmod 0644 /sys/devices/system/cpu/cpu0/cpufreq/interactive/target_loads
-   write /sys/devices/system/cpu/cpu0/cpufreq/interactive/target_loads "75 1170000:85"
-   chmod 0644 /sys/devices/system/cpu/cpu0/cpufreq/interactive/min_sample_time
-   write /sys/devices/system/cpu/cpu0/cpufreq/interactive/min_sample_time 40000
-   chmod 0644 /sys/devices/system/cpu/cpu0/cpufreq/interactive/mode
-   write /sys/devices/system/cpu/cpu0/cpufreq/interactive/mode 0
-   chmod 0644 /sys/devices/system/cpu/cpu0/cpufreq/interactive/boost
-   write /sys/devices/system/cpu/cpu0/cpufreq/interactive/boost 0
-   chmod 0644 /sys/devices/system/cpu/cpu0/cpufreq/interactive/io_is_busy
-   write /sys/devices/system/cpu/cpu0/cpufreq/interactive/io_is_busy 0
-   chmod 0644 /sys/devices/system/cpu/cpu0/cpufreq/interactive/param_index
-   write /sys/devices/system/cpu/cpu0/cpufreq/interactive/param_index 0
-   chmod 0644 /sys/devices/system/cpu/cpu0/cpufreq/interactive/boostpulse_duration
-   write /sys/devices/system/cpu/cpu0/cpufreq/interactive/boostpulse_duration 40000
+   chmod 0644 /sys/devices/system/cpu/cpu0/cpufreq/thunderstorm/go_hispeed_load
+   write /sys/devices/system/cpu/cpu0/cpufreq/thunderstorm/go_hispeed_load 85
+   chmod 0644 /sys/devices/system/cpu/cpu0/cpufreq/thunderstorm/above_hispeed_delay
+   write /sys/devices/system/cpu/cpu0/cpufreq/thunderstorm/above_hispeed_delay "25000 1170000:30000"
+   chmod 0644 /sys/devices/system/cpu/cpu0/cpufreq/thunderstorm/timer_rate
+   write /sys/devices/system/cpu/cpu0/cpufreq/thunderstorm/timer_rate 20000
+   chmod 0644 /sys/devices/system/cpu/cpu0/cpufreq/thunderstorm/hispeed_freq
+   write /sys/devices/system/cpu/cpu0/cpufreq/thunderstorm/hispeed_freq 1170000
+   chmod 0644 /sys/devices/system/cpu/cpu0/cpufreq/thunderstorm/timer_slack
+   write /sys/devices/system/cpu/cpu0/cpufreq/thunderstorm/timer_slack 20000
+   chmod 0644 /sys/devices/system/cpu/cpu0/cpufreq/thunderstorm/target_loads
+   write /sys/devices/system/cpu/cpu0/cpufreq/thunderstorm/target_loads "75 1066000:85"
+   chmod 0644 /sys/devices/system/cpu/cpu0/cpufreq/thunderstorm/min_sample_time
+   write /sys/devices/system/cpu/cpu0/cpufreq/thunderstorm/min_sample_time 40000
+   chmod 0644 /sys/devices/system/cpu/cpu0/cpufreq/thunderstorm/mode
+   write /sys/devices/system/cpu/cpu0/cpufreq/thunderstorm/mode 0
+   chmod 0644 /sys/devices/system/cpu/cpu0/cpufreq/thunderstorm/boost
+   write /sys/devices/system/cpu/cpu0/cpufreq/thunderstorm/boost 0
+   chmod 0644 /sys/devices/system/cpu/cpu0/cpufreq/thunderstorm/io_is_busy
+   write /sys/devices/system/cpu/cpu0/cpufreq/thunderstorm/io_is_busy 0
+   chmod 0644 /sys/devices/system/cpu/cpu0/cpufreq/thunderstorm/param_index
+   write /sys/devices/system/cpu/cpu0/cpufreq/thunderstorm/param_index 0
+   chmod 0644 /sys/devices/system/cpu/cpu0/cpufreq/thunderstorm/boostpulse_duration
+   write /sys/devices/system/cpu/cpu0/cpufreq/thunderstorm/boostpulse_duration 30000
+   write /sys/devices/system/cpu/cpu0/cpufreq/thunderstorm/down_low_load_threshold 2
 
    # Big CPU
    chmod 0644 /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
-   write /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor interactive
+   write /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor thunderstorm
    chmod 0644 /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
-   write /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 728000
+   write /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 416000
    chmod 0644 /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq
    write /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq 2288000
-   chmod 0644 /sys/devices/system/cpu/cpu4/cpufreq/interactive/go_hispeed_load
-   write /sys/devices/system/cpu/cpu4/cpufreq/interactive/go_hispeed_load 94
-   chmod 0644 /sys/devices/system/cpu/cpu4/cpufreq/interactive/above_hispeed_delay
-   write /sys/devices/system/cpu/cpu4/cpufreq/interactive/above_hispeed_delay "59000 1248000:79000 1664000:20000"
-   chmod 0644 /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_rate
-   write /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_rate 30000
-   chmod 0644 /sys/devices/system/cpu/cpu4/cpufreq/interactive/hispeed_freq
-   write /sys/devices/system/cpu/cpu4/cpufreq/interactive/hispeed_freq 1248000
-   chmod 0644 /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_slack
-   write /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_slack 20000
-   chmod 0644 /sys/devices/system/cpu/cpu4/cpufreq/interactive/target_loads
-   write /sys/devices/system/cpu/cpu4/cpufreq/interactive/target_loads "80 1040000:81 1352000:87 1664000:90"
-   chmod 0644 /sys/devices/system/cpu/cpu4/cpufreq/interactive/min_sample_time
-   write /sys/devices/system/cpu/cpu4/cpufreq/interactive/min_sample_time 40000
-   chmod 0644 /sys/devices/system/cpu/cpu4/cpufreq/interactive/mode
-   write /sys/devices/system/cpu/cpu4/cpufreq/interactive/mode 0
-   chmod 0644 /sys/devices/system/cpu/cpu4/cpufreq/interactive/boost
-   write /sys/devices/system/cpu/cpu4/cpufreq/interactive/boost 0
-   chmod 0644 /sys/devices/system/cpu/cpu4/cpufreq/interactive/io_is_busy
-   write /sys/devices/system/cpu/cpu4/cpufreq/interactive/io_is_busy 0
-   chmod 0644 /sys/devices/system/cpu/cpu4/cpufreq/interactive/param_index
-   write /sys/devices/system/cpu/cpu4/cpufreq/interactive/param_index 0
-   chmod 0644 /sys/devices/system/cpu/cpu4/cpufreq/interactive/boostpulse_duration
-   write /sys/devices/system/cpu/cpu4/cpufreq/interactive/boostpulse_duration 40000
+   chmod 0644 /sys/devices/system/cpu/cpu4/cpufreq/thunderstorm/go_hispeed_load
+   write /sys/devices/system/cpu/cpu4/cpufreq/thunderstorm/go_hispeed_load 92
+   chmod 0644 /sys/devices/system/cpu/cpu4/cpufreq/thunderstorm/above_hispeed_delay
+   write /sys/devices/system/cpu/cpu4/cpufreq/thunderstorm/above_hispeed_delay "59000 1248000:69000 1664000:29000"
+   chmod 0644 /sys/devices/system/cpu/cpu4/cpufreq/thunderstorm/timer_rate
+   write /sys/devices/system/cpu/cpu4/cpufreq/thunderstorm/timer_rate 20000
+   chmod 0644 /sys/devices/system/cpu/cpu4/cpufreq/thunderstorm/hispeed_freq
+   write /sys/devices/system/cpu/cpu4/cpufreq/thunderstorm/hispeed_freq 1248000
+   chmod 0644 /sys/devices/system/cpu/cpu4/cpufreq/thunderstorm/timer_slack
+   write /sys/devices/system/cpu/cpu4/cpufreq/thunderstorm/timer_slack 20000
+   chmod 0644 /sys/devices/system/cpu/cpu4/cpufreq/thunderstorm/target_loads
+   write /sys/devices/system/cpu/cpu4/cpufreq/thunderstorm/target_loads "80 1040000:81 1352000:87 1664000:90"
+   chmod 0644 /sys/devices/system/cpu/cpu4/cpufreq/thunderstorm/min_sample_time
+   write /sys/devices/system/cpu/cpu4/cpufreq/thunderstorm/min_sample_time 40000
+   chmod 0644 /sys/devices/system/cpu/cpu4/cpufreq/thunderstorm/mode
+   write /sys/devices/system/cpu/cpu4/cpufreq/thunderstorm/mode 0
+   chmod 0644 /sys/devices/system/cpu/cpu4/cpufreq/thunderstorm/boost
+   write /sys/devices/system/cpu/cpu4/cpufreq/thunderstorm/boost 0
+   chmod 0644 /sys/devices/system/cpu/cpu4/cpufreq/thunderstorm/io_is_busy
+   write /sys/devices/system/cpu/cpu4/cpufreq/thunderstorm/io_is_busy 0
+   chmod 0644 /sys/devices/system/cpu/cpu4/cpufreq/thunderstorm/param_index
+   write /sys/devices/system/cpu/cpu4/cpufreq/thunderstorm/param_index 0
+   chmod 0644 /sys/devices/system/cpu/cpu4/cpufreq/thunderstorm/boostpulse_duration
+   write /sys/devices/system/cpu/cpu4/cpufreq/thunderstorm/boostpulse_duration 30000
+   write /sys/devices/system/cpu/cpu4/cpufreq/thunderstorm/down_low_load_threshold 5
 
    #HMP settings
    chmod 0664 /sys/kernel/hmp/up_threshold
@@ -87,7 +89,7 @@ on boot
    write /sys/kernel/hmp/down_compensation_mid_freq 962000
    chmod 0664 /sys/kernel/hmp/down_compensation_low_freq
    write /sys/kernel/hmp/down_compensation_low_freq 858000
-   write /proc/sys/kernel/random/write_wakeup_threshold 512
+   write /proc/sys/kernel/random/write_wakeup_threshold 320
    write /proc/sys/kernel/random/read_wakeup_threshold 64
    write /proc/sys/vm/dirty_expire_centisecs 1000
    write /proc/sys/vm/dirty_writeback_centisecs 2000
@@ -112,7 +114,7 @@ on boot
    chmod 0644 /sys/power/cpuhotplug/governor/to_dual_ratio
    write /sys/power/cpuhotplug/governor/to_dual_ratio 70
    chmod 0644 /sys/power/cpuhotplug/governor/to_quad_ratio
-   write /sys/power/cpuhotplug/governor/to_quad_ratio 95
+   write /sys/power/cpuhotplug/governor/to_quad_ratio 92
 
    # FINGERPRINT BOOST
    write /sys/kernel/fp_boost/enabled 0
@@ -176,7 +178,7 @@ on boot
     # LMK
     write /sys/module/lowmemorykiller/parameters/minfree "18432,23040,27648,32256,56064,76152"
     write /proc/sys/vm/vfs_cache_pressure 100
-    write /proc/sys/vm/swappiness 160
+    write /proc/sys/vm/swappiness 170
 
     # WiFi
     setprop wifi.supplicant_scan_interval 500

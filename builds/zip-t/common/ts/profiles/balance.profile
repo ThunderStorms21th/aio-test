@@ -154,6 +154,6 @@
 
    # LMK
    write /sys/module/lowmemorykiller/parameters/minfree "18432,23040,27648,32256,56064,76152"
-   write /proc/sys/vm/vfs_cache_pressure 100
+   write /proc/sys/vm/vfs_cache_pressure 70
    write /proc/sys/vm/swappiness 170
 

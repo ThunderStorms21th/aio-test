@@ -22,6 +22,7 @@
 #include <linux/lockdep.h>
 #include <linux/delay.h>
 #include <linux/irq.h>
+#include <linux/interrupt.h>
 #include <trace/events/power.h>
 
 #include <trace/events/sched.h>

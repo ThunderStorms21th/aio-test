@@ -13,7 +13,7 @@ export SUBARCH=arm64
 CCACHE="$(command -v ccache)"
 export CCACHE
 
-export BUILD_CROSS_COMPILE=~/kernel/toolchain/aarch64-linux-android-4.9/bin/aarch64-linux-android-
+export BUILD_CROSS_COMPILE=~/kernel/toolchain/aarch64-elf-gcc/bin/aarch64-elf-
 
 export CROSS_COMPILE="${CCACHE} $BUILD_CROSS_COMPILE"
 BUILD_JOB_NUMBER="$(grep -c '^processor' /proc/cpuinfo)"

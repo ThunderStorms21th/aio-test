@@ -617,7 +617,6 @@ static DEVICE_ATTR(psr_info, S_IRUGO, decon_psr_info, NULL);
 
 int decon_f_create_vsync_thread(struct decon_device *decon)
 {
-	struct sched_param param = { .sched_priority = 16 };
 	int ret = 0;
 
 	ret = device_create_file(decon->dev, &dev_attr_vsync);
@@ -632,8 +631,6 @@ int decon_f_create_vsync_thread(struct decon_device *decon)
 		decon_err("failed to run vsync thread\n");
 		decon->vsync_info.thread = NULL;
 	}
-
-	sched_setscheduler(decon->vsync.thread, SCHED_FIFO, &param);
 
 	return ret;
 }

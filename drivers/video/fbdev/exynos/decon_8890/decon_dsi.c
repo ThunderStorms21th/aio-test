@@ -633,7 +633,7 @@ int decon_f_create_vsync_thread(struct decon_device *decon)
 		decon->vsync_info.thread = NULL;
 	}
 
-	sched_setscheduler_nocheck(decon->vsync.thread, SCHED_FIFO, &param);
+	sched_setscheduler(decon->vsync.thread, SCHED_FIFO, &param);
 
 	return ret;
 }

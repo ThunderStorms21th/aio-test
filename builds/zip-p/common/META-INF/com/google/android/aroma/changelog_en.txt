@@ -21,7 +21,7 @@
    -mm, fs, linux, i/o
 <*>Added EAS and new gov SCHED by @Tetsuo Osaka </*>
 <*>ThunderTweaks v1.0.4.0 </*>
-<*>Magisk 20.0 Offcial</*>
+<*>Magisk 20.1 Offcial</*>
 <*>Better Stability and RAM Management </*>
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------

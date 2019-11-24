@@ -142,7 +142,7 @@ FUNC_BUILD_RAMDISK()
 	cd "$RDIR"/builds || exit
 	mkdir temp
 	cp -rf aik/. temp
-	cp -rf TREBLE/. temp
+	cp -rf TREBLE-P/. temp
 	
 	rm -f temp/split_img/boot.img-zImage
 	rm -f temp/split_img/boot.img-dtb
@@ -179,7 +179,7 @@ FUNC_BUILD_FLASHABLES()
 {
 	cd "$RDIR"/builds || exit
 	mkdir temp2
-	cp -rf zip-t/common/. temp2
+	cp -rf zip-tP/common/. temp2
     	mv *.img temp2/
 	cd temp2 || exit
 	echo ""
@@ -266,9 +266,9 @@ if [ "$prompt" == "1" ]; then
     KERNEL_DEFCONFIG=$DEFCONFIG_S7FLAT
     LOG=$FLAT_LOG
     ZIP_DATE=$(date +%Y%m%d)
-    export KERNEL_VERSION="$K_NAME-$K_BASE-TREBLE-$K_VERSION"
+    export KERNEL_VERSION="$K_NAME-$K_BASE-TREBLE-P-$K_VERSION"
     echo "S7 Flat G930F Selected"
-    ZIP_NAME=$K_NAME-$MODEL-TREBLE-$K_VERSION-$ZIP_DATE.zip
+    ZIP_NAME=$K_NAME-$MODEL-TREBLE-P-$K_VERSION-$ZIP_DATE.zip
     MAIN
 elif [ "$prompt" == "2" ]; then
     MODEL=G935
@@ -276,9 +276,9 @@ elif [ "$prompt" == "2" ]; then
     KERNEL_DEFCONFIG=$DEFCONFIG_S7EDGE
     LOG=$EDGE_LOG
     ZIP_DATE=$(date +%Y%m%d)
-    export KERNEL_VERSION="$K_NAME-$K_BASE-TREBLE-$K_VERSION"
+    export KERNEL_VERSION="$K_NAME-$K_BASE-TREBLE-P-$K_VERSION"
     echo "S7 Edge G935F Selected"
-    ZIP_NAME=$K_NAME-$MODEL-TREBLE-$K_VERSION-$ZIP_DATE.zip
+    ZIP_NAME=$K_NAME-$MODEL-TREBLE-P-$K_VERSION-$ZIP_DATE.zip
     MAIN
 elif [ "$prompt" == "3" ]; then
     MODEL=G935
@@ -286,16 +286,16 @@ elif [ "$prompt" == "3" ]; then
     KERNEL_DEFCONFIG=$DEFCONFIG_S7EDGE
     LOG=$EDGE_LOG
     ZIP_DATE=$(date +%Y%m%d)
-    export KERNEL_VERSION="$K_NAME-$K_BASE-TREBLE-$K_VERSION"
+    export KERNEL_VERSION="$K_NAME-$K_BASE-TREBLE-P-$K_VERSION"
     echo "S7 EDGE + FLAT Selected"
     echo "Compiling EDGE ..."
     MAIN2
     MODEL=G930
     KERNEL_DEFCONFIG=$DEFCONFIG_S7FLAT
     LOG=$FLAT_LOG
-    export KERNEL_VERSION="$K_NAME-$K_BASE-TREBLE-$K_VERSION"
+    export KERNEL_VERSION="$K_NAME-$K_BASE-TREBLE-P-$K_VERSION"
     echo "Compiling FLAT ..."
-    ZIP_NAME=$K_NAME-G93X-TREBLE-$K_VERSION-$ZIP_DATE.zip
+    ZIP_NAME=$K_NAME-G93X-TREBLE-P-$K_VERSION-$ZIP_DATE.zip
     MAIN
 fi
 

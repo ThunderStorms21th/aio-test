@@ -104,6 +104,7 @@ obj-$(CONFIG_CPU_FREQ_GOV_USERSPACE)		+= cpufreq_userspace.o
 obj-$(CONFIG_CPU_BOOST)			+= cpu-boost.o
 obj-$(CONFIG_FINGERPRINT_BOOST)		+= fp-boost.o
 obj-$(CONFIG_CPU_INPUT_BOOST)		+= cpu_input_boost.o
+obj-$(CONFIG_CPU_INPUT_BOOST_8890)	+= cpu_input_boost_8890.o
 # obj-$(CONFIG_CPU_FREQ_GOV_SCHED) += cpufreq_sched.o
 obj-$(CONFIG_CPU_FREQ_GOV_SCHEDUTIL) += cpufreq_schedutil.o
 

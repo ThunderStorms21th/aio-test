@@ -160,10 +160,10 @@ KBASE_EXPORT_TEST_API(kbase_event_dequeue);
  *                                       resources
  * @data:  Work structure
  */
-static void kbase_event_process_noreport_worker(struct kthread_work *data)
+static void kbase_event_process_noreport_worker(struct work_struct *data)
 {
 	struct kbase_jd_atom *katom = container_of(data, struct kbase_jd_atom,
-			event_work);
+			work);
 	struct kbase_context *kctx = katom->kctx;
 
 	if (katom->core_req & BASE_JD_REQ_EXTERNAL_RESOURCES)
@@ -187,8 +187,8 @@ static void kbase_event_process_noreport(struct kbase_context *kctx,
 		struct kbase_jd_atom *katom)
 {
 	if (katom->core_req & BASE_JD_REQ_EXTERNAL_RESOURCES) {
-		init_kthread_work(&katom->event_work, kbase_event_process_noreport_worker);
-		queue_kthread_work(&kctx->worker, &katom->event_work);
+		INIT_WORK(&katom->work, kbase_event_process_noreport_worker);
+		queue_work(kctx->event_workq, &katom->work);
 	} else {
 		kbase_event_process(kctx, katom);
 	}
@@ -287,6 +287,7 @@ void kbase_event_cleanup(struct kbase_context *kctx)
 	int event_count;
 
 	KBASE_DEBUG_ASSERT(kctx);
+	KBASE_DEBUG_ASSERT(kctx->event_workq);
 
 	flush_workqueue(kctx->event_workq);
 	destroy_workqueue(kctx->event_workq);

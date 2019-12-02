@@ -10,9 +10,9 @@
    chmod 0644 /sys/devices/system/cpu/cpu0/cpufreq/thunderstorm/go_hispeed_load
    write /sys/devices/system/cpu/cpu0/cpufreq/thunderstorm/go_hispeed_load 87
    chmod 0644 /sys/devices/system/cpu/cpu0/cpufreq/thunderstorm/above_hispeed_delay
-   write /sys/devices/system/cpu/cpu0/cpufreq/thunderstorm/above_hispeed_delay "60000 1066000:30000"
+   write /sys/devices/system/cpu/cpu0/cpufreq/thunderstorm/above_hispeed_delay "50000 1066000:30000"
    chmod 0644 /sys/devices/system/cpu/cpu0/cpufreq/thunderstorm/timer_rate
-   write /sys/devices/system/cpu/cpu0/cpufreq/thunderstorm/timer_rate 40000
+   write /sys/devices/system/cpu/cpu0/cpufreq/thunderstorm/timer_rate 30000
    chmod 0644 /sys/devices/system/cpu/cpu0/cpufreq/thunderstorm/hispeed_freq
    write /sys/devices/system/cpu/cpu0/cpufreq/thunderstorm/hispeed_freq 754000
    chmod 0644 /sys/devices/system/cpu/cpu0/cpufreq/thunderstorm/timer_slack
@@ -43,9 +43,9 @@
    chmod 0644 /sys/devices/system/cpu/cpu4/cpufreq/thunderstorm/go_hispeed_load
    write /sys/devices/system/cpu/cpu4/cpufreq/thunderstorm/go_hispeed_load 92
    chmod 0644 /sys/devices/system/cpu/cpu4/cpufreq/thunderstorm/above_hispeed_delay
-   write /sys/devices/system/cpu/cpu4/cpufreq/thunderstorm/above_hispeed_delay "59000 1560000:59000 1664000:49000"
+   write /sys/devices/system/cpu/cpu4/cpufreq/thunderstorm/above_hispeed_delay "50000 1560000:49000 1664000:49000"
    chmod 0644 /sys/devices/system/cpu/cpu4/cpufreq/thunderstorm/timer_rate
-   write /sys/devices/system/cpu/cpu4/cpufreq/thunderstorm/timer_rate 40000
+   write /sys/devices/system/cpu/cpu4/cpufreq/thunderstorm/timer_rate 30000
    chmod 0644 /sys/devices/system/cpu/cpu4/cpufreq/thunderstorm/hispeed_freq
    write /sys/devices/system/cpu/cpu4/cpufreq/thunderstorm/hispeed_freq 1352000
    chmod 0644 /sys/devices/system/cpu/cpu4/cpufreq/thunderstorm/timer_slack
@@ -80,7 +80,7 @@
    chmod 0644 /sys/power/cpuhotplug/governor/enabled
    write /sys/power/cpuhotplug/governor/enabled 1
    chmod 0664 /sys/power/cpuhotplug/governor/dual_change_ms
-   # write /sys/power/cpuhotplug/governor/dual_change_ms 400
+   # write /sys/power/cpuhotplug/governor/dual_change_ms 50
    chmod 0644 /sys/power/cpuhotplug/governor/lit_multi_ratio
    write /sys/power/cpuhotplug/governor/lit_multi_ratio 100
    chmod 0644 /sys/power/cpuhotplug/governor/to_dual_ratio
@@ -112,7 +112,7 @@
    chmod 0644 /sys/devices/14ac0000.mali/highspeed_clock
    write /sys/devices/14ac0000.mali/highspeed_clock 419
    chmod 0644 /sys/devices/14ac0000.mali/highspeed_load
-   write /sys/devices/14ac0000.mali/highspeed_load 90
+   write /sys/devices/14ac0000.mali/highspeed_load 92
    chmod 0644 /sys/devices/14ac0000.mali/highspeed_delay
    write /sys/devices/14ac0000.mali/highspeed_delay 1
    write /sys/devices/14ac0000.mali/throttling1 600

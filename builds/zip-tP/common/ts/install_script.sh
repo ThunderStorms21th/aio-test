@@ -61,7 +61,7 @@ if [ $MODEL == $MODEL2 ]; then MODEL_DESC=$MODEL2_DESC; fi
 set_progress 0.01
 
 set_progress 0.10
-show_progress 0.37 -4000
+show_progress 0.49 -4000
 
 ## FLASH KERNEL
 ui_print " "
@@ -75,7 +75,7 @@ dd of=/dev/block/platform/155a0000.ufs/by-name/BOOT if=/tmp/ts/$MODEL-boot.img
 ui_print "-- Done"
 
 
-set_progress 0.37
+set_progress 0.49
 
 
 #======================================
